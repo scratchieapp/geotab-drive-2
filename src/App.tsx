@@ -3,6 +3,13 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import './App.css';
 import { GeotabProvider, useGeotab } from './contexts/GeotabContext';
 
+// Define driver interface
+interface SimpleDriver {
+  id: number;
+  name: string;
+  performanceScore: number;
+}
+
 // Simplified components
 const Login = () => {
   const { login, isLoading, error } = useGeotab();
@@ -80,7 +87,7 @@ const Login = () => {
 
 const Dashboard = () => {
   const { logout, userPreferences } = useGeotab();
-  const [drivers, setDrivers] = React.useState([]);
+  const [drivers, setDrivers] = React.useState<SimpleDriver[]>([]);
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
@@ -113,7 +120,7 @@ const Dashboard = () => {
           <p>Loading drivers...</p>
         ) : (
           <div className="scratchie-driver-list">
-            {drivers.map((driver: any) => (
+            {drivers.map((driver) => (
               <div key={driver.id} className="scratchie-driver-card">
                 <h3>{driver.name}</h3>
                 <p>Performance Score: {driver.performanceScore}%</p>
