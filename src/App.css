@@ -435,11 +435,23 @@ button:disabled {
 .scratchie-login-card {
   width: 100%;
   max-width: 450px;
+  background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.scratchie-login-card h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
 }
 
 .scratchie-login-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 4px;
   margin-bottom: 1.5rem;
 }
 
@@ -447,6 +459,102 @@ button:disabled {
   margin-bottom: 1.5rem;
 }
 
+.scratchie-form-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.scratchie-form-field input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
 .scratchie-form-actions {
   margin-top: 2rem;
+}
+
+.scratchie-form-actions button {
+  width: 100%;
+}
+
+.scratchie-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.scratchie-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.scratchie-header h1 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.scratchie-user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.scratchie-main h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.scratchie-driver-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.scratchie-driver-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.scratchie-driver-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.scratchie-driver-card p {
+  margin-bottom: 1rem;
+  color: #7f8c8d;
+}
+
+/* Add these styles at the top of the file */
+.scratchie-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.scratchie-button:hover {
+  background-color: #2980b9;
+}
+
+.scratchie-button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
 }
